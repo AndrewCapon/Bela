@@ -1223,7 +1223,8 @@ void PRU::loop(void *userData, void(*render)(BelaContext*, void*), bool highPerf
 					// also rescale it to avoid
 					// headroom problem on the analog outputs with a sagging
 					// 5V USB supply
-					const float analogOutMax = 0.93;
+					//const float analogOutMax = 0.93;
+					const float analogOutMax = 0.83587;
 					context->analogOut[n] = (1.f - context->analogOut[n]) * analogOutMax;
 				}
 			}
